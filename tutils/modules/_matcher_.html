@@ -1,0 +1,420 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;matcher&quot; | tutils</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">tutils</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_matcher_.html">&quot;matcher&quot;</a>
+				</li>
+			</ul>
+			<h1>External module &quot;matcher&quot;</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_matcher_.matcher.html" class="tsd-kind-icon">Matcher</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_matcher_.html#pattern" class="tsd-kind-icon">Pattern</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_matcher_.html#isglob" class="tsd-kind-icon">is<wbr>Glob</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_matcher_.html#match" class="tsd-kind-icon">match</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="pattern" class="tsd-anchor"></a>
+					<h3>Pattern</h3>
+					<div class="tsd-signature tsd-kind-icon">Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">test</span><span class="tsd-signature-symbol"> | </span><a href="../classes/_matcher_.matcher.html" class="tsd-signature-type">Matcher</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">test</span><span class="tsd-signature-symbol"> | </span><a href="../classes/_matcher_.matcher.html" class="tsd-signature-type">Matcher</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in matcher.ts:247</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>表示一个匹配模式，可以是通配符、正则表达式、自定义函数、匹配器或以上模式组成的数组</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>description</dt>
+							<dd><h5 id="通配符">通配符</h5>
+								<p>在通配符中可以使用以下特殊字符：</p>
+								<ul>
+									<li><code>?</code>: 匹配固定一个字符，但 <code>/</code> 和文件名开头的 <code>.</code> 除外</li>
+									<li><code>*</code>: 匹配任意个字符，但 <code>/</code> 和文件名开头的 <code>.</code> 除外</li>
+									<li><code>**</code>: 匹配任意个字符，但文件名开头的 <code>.</code> 除外</li>
+									<li><code>[abc]</code>: 匹配方括号中的任一个字符</li>
+									<li><code>[a-z]</code>: 匹配 a 到 z 的任一个字符</li>
+									<li><code>[!abc]</code>: 匹配方括号中的任一个字符以外的字符</li>
+									<li><code>{abc,xyz}</code>: 匹配大括号中的任一种模式</li>
+									<li><code>\</code>: 表示转义字符，如 <code>\[</code> 表示 <code>[</code> 按普通字符处理</li>
+									<li><code>!xyz</code>：如果通配符以 <code>!</code> 开头，表示排除匹配的项，注意如果排除了父文件夹，出于性能考虑，无法重新包含其中的子文件</li>
+								</ul>
+								<p><code>*</code> 和 <code>**</code> 的区别在于 <code>**</code> 可以匹配任意级文件夹，而 <code>*</code> 只能匹配一级，
+								但如果通配符中没有 <code>/</code>（末尾的除外），则通配符只需匹配文件名部分</p>
+								<table>
+									<thead>
+										<tr>
+											<th>通配符\路径</th>
+											<th><code>foo.js</code></th>
+											<th><code>dir/foo.js</code></th>
+											<th><code>dir/sub/foo.js</code></th>
+										</tr>
+									</thead>
+									<tbody><tr>
+											<td>*.js</td>
+											<td>匹配</td>
+											<td>匹配</td>
+											<td>匹配</td>
+										</tr>
+										<tr>
+											<td>./*.js</td>
+											<td>匹配</td>
+											<td>不匹配</td>
+											<td>不匹配</td>
+										</tr>
+										<tr>
+											<td>dir/*.js</td>
+											<td>不匹配</td>
+											<td>匹配</td>
+											<td>不匹配</td>
+										</tr>
+										<tr>
+											<td>dir/**.js</td>
+											<td>不匹配</td>
+											<td>匹配</td>
+											<td>匹配</td>
+										</tr>
+										<tr>
+											<td>dir/*‌/foo.js</td>
+											<td>不匹配</td>
+											<td>不匹配</td>
+											<td>匹配</td>
+										</tr>
+										<tr>
+											<td>dir/**‌/foo.js</td>
+											<td>不匹配</td>
+											<td>匹配</td>
+											<td>匹配</td>
+										</tr>
+								</tbody></table>
+								<p><code>*</code>、<code>**</code> 和 <code>?</code> 不匹配以 <code>.</code> 开头的文件名，要允许匹配，应写成 <code>{.,}*</code></p>
+								<table>
+									<thead>
+										<tr>
+											<th>通配符</th>
+											<th>路径</th>
+											<th>结果</th>
+										</tr>
+									</thead>
+									<tbody><tr>
+											<td>*</td>
+											<td>.js</td>
+											<td>不匹配</td>
+										</tr>
+										<tr>
+											<td>.*</td>
+											<td>.js</td>
+											<td>匹配</td>
+										</tr>
+										<tr>
+											<td>x*y</td>
+											<td>x.y</td>
+											<td>匹配</td>
+										</tr>
+										<tr>
+											<td>*</td>
+											<td>.git/config</td>
+											<td>匹配</td>
+										</tr>
+										<tr>
+											<td><em>*‌‌/</em></td>
+											<td>.git/config</td>
+											<td>不匹配</td>
+										</tr>
+								</tbody></table>
+								<p>如果通配符以 <code>/</code> 结尾，表示匹配文件夹；如果匹配了文件夹，等价于匹配内部的所有子文件</p>
+								<p>默认地，通配符只负责逐字匹配，所以 <code>./</code>、<code>../</code> 等符号不会被特殊处理（除了开头的 <code>./</code>）</p>
+								<p>如果设置了 <code>baseDir</code>，则通配符只匹配绝对路径：</p>
+								<ol>
+									<li>支持前缀 <code>../</code></li>
+									<li>Windows 下改用 <code>\</code> 作为分隔符</li>
+									<li>如果通配符也是绝对路径，则 <code>[]</code>、<code>{}</code>、<code>\</code>（仅 Windows）作普通字符匹配</li>
+								</ol>
+								<h5 id="正则表达式">正则表达式</h5>
+								<p>正则表达式的源是一个固定以 <code>/</code> 为分隔符的相对路径</p>
+								<h5 id="自定义函数">自定义函数</h5>
+								<p>函数接收原始路径为参数，如果函数返回 <code>true</code> 表示匹配该路径，如：</p>
+								<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">match</span>(<span class="hljs-params">path</span>) </span>{
+    <span class="hljs-keyword">return</span> path.endsWith(<span class="hljs-string">".js"</span>)
+}</code></pre>
+								<h5 id="匹配器">匹配器</h5>
+								<p>可以从现成匹配器复制新的匹配器</p>
+								<h5 id="数组">数组</h5>
+								<p>可以将以上模式自由组合成数组，只要匹配数组中任一个模式，就认定匹配当前模式</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="isglob" class="tsd-anchor"></a>
+					<h3>is<wbr>Glob</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Glob<span class="tsd-signature-symbol">(</span>pattern<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in matcher.ts:553</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>判断指定的模式是否是通配符</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pattern: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>要判断的模式</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="match" class="tsd-anchor"></a>
+					<h3>match</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">match<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, pattern<span class="tsd-signature-symbol">: </span><a href="_matcher_.html#pattern" class="tsd-signature-type">Pattern</a>, baseDir<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, ignoreCase<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in matcher.ts:545</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>测试指定的路径是否匹配指定的模式</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>要测试的路径</p>
+									</div>
+								</li>
+								<li>
+									<h5>pattern: <a href="_matcher_.html#pattern" class="tsd-signature-type">Pattern</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>要测试的匹配模式</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> baseDir: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>如果需要匹配绝对路径，则设置匹配的根绝对路径</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ignoreCase: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>是否忽略路径的大小写</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="_matcher_.html">"matcher"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="../classes/_matcher_.matcher.html" class="tsd-kind-icon">Matcher</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_matcher_.html#pattern" class="tsd-kind-icon">Pattern</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_matcher_.html#isglob" class="tsd-kind-icon">is<wbr>Glob</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_matcher_.html#match" class="tsd-kind-icon">match</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a772fc0ebcc2ca0f4be921d9dce0fb78";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1310 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>tutils</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">tutils</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> tutils</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="tutils">TUtils</h1>
+				<p>TUtils 提供了大量 Node.js 开发必备的工具组件，比如命令行、网络库、文件操作等。</p>
+				<h2 id="特性">特性</h2>
+				<ol>
+					<li>【强大】<strong>30+</strong> 个组件(<strong>可单独引用</strong>)，顶 <strong>140+</strong> 个 NPM 依赖；</li>
+					<li>【轻量】所有源码不超过 <strong>300K</strong>，无外部依赖；</li>
+					<li>【性能】几乎所有组件在性能上稳超 NPM 社区组件；</li>
+					<li>【稳定】大量的单元测试(覆盖率 <strong>90%+</strong>)和生产实践，测试用例和社区同步；</li>
+					<li>【文档】完美全中文文档，VSCode/WebStorm/VS 等可智能提示。</li>
+				</ol>
+				<h2 id="为什么要重做轮子">为什么要重做轮子</h2>
+				<ol>
+					<li>NPM 组件为了照顾所有用户的需求，往往提供很多冗余的功能，增加了复杂度、降级了性能，而 TUtils 会帮用户决定，只保留一种性价比最高的方案；</li>
+					<li>NPM 组件风格不一，命名无规律，每次用都要翻文档。TUtils 所有组件遵循同一规范，可以举一反三，过目不忘；</li>
+					<li>NPM 上有大量功能相似的组件被同时依赖，写个 Hello World 都要依赖几十个包；</li>
+					<li>NPM 上有很多历史遗留代码(比如为了支持低版本 Node)，TUtils 只考虑 Node 最新稳定版(LTS)，以确保既轻量又高效；</li>
+					<li>很多 NPM 组件对中日韩文支持不好。</li>
+				</ol>
+				<p>NPM 社区是开放的，也产生了很多优秀的组件；TUtils 则相对封闭，以保障组件的质量和体验。这类似于开放的安卓和封闭的苹果之间的区别。</p>
+				<h2 id="用法">用法</h2>
+				<p>使用 NPM 安装：</p>
+				<pre><code class="language-bash">npm install tutils --save</code></pre>
+				<blockquote>
+					<p>注意：TUtils 基于 ES2018 编写，只支持 Node v10.12+，部分组件可能不兼容低版本。</p>
+				</blockquote>
+				<p>可以一行代码引用所有组件：</p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> tutils = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils"</span>)</code></pre>
+				<p>也可以单独引入某个组件，比如：</p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/fileSystemSync"</span>)</code></pre>
+				<h2 id="api-文档">API 文档</h2>
+				<p><a href="http://tpack.github.io/tutils/">点击查看生成的 API 文档</a></p>
+				<h2 id="组件列表">组件列表</h2>
+				<h3 id="目录">目录</h3>
+				<ul>
+					<li>文件操作<ul>
+							<li><a href="#fileSystem">fileSystem</a>：文件操作（异步）</li>
+							<li><a href="#fileSystemSync">fileSystemSync</a>：文件操作（同步）</li>
+							<li><a href="#memoryFileSystem">memoryFileSystem</a>：文件操作（内存模拟）</li>
+							<li><a href="#fileSystemWatcher">fileSystemWatcher</a>：监听</li>
+							<li><a href="#matcher">matcher</a>：通配符</li>
+							<li><a href="#path">path</a>：路径计算</li>
+						</ul>
+					</li>
+					<li>网络<ul>
+							<li><a href="#request">request</a>：发送 HTTP/HTTPS 请求</li>
+							<li><a href="#httpServer">httpServer</a>：HTTP 服务器封装</li>
+							<li><a href="#webSocket">webSocket</a>：WebSocket 服务端和客户端</li>
+							<li><a href="#url">url</a>：地址计算</li>
+						</ul>
+					</li>
+					<li>进程<ul>
+							<li><a href="#process">process</a>：进程操作</li>
+							<li><a href="#vm">vm</a>：JS 沙盒</li>
+							<li><a href="#workerPool">workerPool</a>：线程池</li>
+						</ul>
+					</li>
+					<li>命令行<ul>
+							<li><a href="#ansi">ansi</a>：命令行颜色、格式</li>
+							<li><a href="#commandLine">commandLine</a>：命令行操作</li>
+							<li><a href="#logger">logger</a>：日志记录器</li>
+						</ul>
+					</li>
+					<li>编码、解析<ul>
+							<li><a href="#base64">base64</a>：Base64 和 DataURI 编码</li>
+							<li><a href="#crypto">crypto</a>：MD5 和 SHA-1 加密</li>
+							<li><a href="#html">html</a>：HTML 编码和解码</li>
+							<li><a href="#js">js</a>：JS 编码和解码</li>
+							<li><a href="#json">json</a>：JSON 编码和解码</li>
+							<li><a href="#css">css</a>：CSS 编码和解码</li>
+							<li><a href="#esm">esm</a>：ES6 模块代码转 CommonJS</li>
+						</ul>
+					</li>
+					<li>生成代码<ul>
+							<li><a href="#lineColumn">lineColumn</a>：行列号和索引换算</li>
+							<li><a href="#sourceMap">sourceMap</a>：读写源映射（Source Map）</li>
+							<li><a href="#textWriter">textWriter</a>：字符串拼接和生成源映射（Source Map）</li>
+							<li><a href="#textDocument">textDocument</a>：字符串编辑和生成源映射（Source Map）</li>
+						</ul>
+					</li>
+					<li>异步<ul>
+							<li><a href="#asyncQueue">asyncQueue</a>：串行执行多个异步任务</li>
+							<li><a href="#deferred">deferred</a>：同时等待多个异步任务</li>
+							<li><a href="#eventEmitter">eventEmitter</a>：支持异步的事件触发器</li>
+						</ul>
+					</li>
+					<li>其它<ul>
+							<li><a href="#misc">misc</a>：其它语言级别的工具函数，比如格式化日期</li>
+						</ul>
+					</li>
+				</ul>
+				<h3 id="文件操作">文件操作</h3>
+				<h4 id="fileSystem">fileSystem</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { FileSystem } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/fileSystem"</span>)
+<span class="hljs-keyword">const</span> fs = <span class="hljs-keyword">new</span> FileSystem()
+
+<span class="hljs-keyword">await</span> fs.writeFile(<span class="hljs-string">"foo.txt"</span>, <span class="hljs-string">"Hello world"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>graceful-fs</code></td>
+							<td><code>FileSystem</code></td>
+						</tr>
+						<tr>
+							<td><code>fs-extra</code></td>
+							<td><code>FileSystem</code></td>
+						</tr>
+						<tr>
+							<td><code>graceful-fs-extra</code></td>
+							<td><code>FileSystem</code></td>
+						</tr>
+						<tr>
+							<td><code>mkdirp</code></td>
+							<td><code>FileSystem.createDir</code></td>
+						</tr>
+						<tr>
+							<td><code>make-dir</code></td>
+							<td><code>FileSystem.createDir</code></td>
+						</tr>
+						<tr>
+							<td><code>cp-file</code></td>
+							<td><code>FileSystem.copFile</code></td>
+						</tr>
+						<tr>
+							<td><code>cpy</code></td>
+							<td><code>FileSystem.copFile</code></td>
+						</tr>
+						<tr>
+							<td><code>ncp</code></td>
+							<td><code>FileSystem.copyDir</code></td>
+						</tr>
+						<tr>
+							<td><code>copy-files-tree</code></td>
+							<td><code>FileSystem.copyDir</code></td>
+						</tr>
+						<tr>
+							<td><code>clean-dir</code></td>
+							<td><code>FileSystem.cleanDir</code></td>
+						</tr>
+						<tr>
+							<td><code>delete</code></td>
+							<td><code>FileSystem.deleteDir</code></td>
+						</tr>
+						<tr>
+							<td><code>del</code></td>
+							<td><code>FileSystem.deleteDir</code></td>
+						</tr>
+						<tr>
+							<td><code>rimraf</code></td>
+							<td><code>FileSystem.deleteDir</code>, <code>FileSystem.deleteFile</code></td>
+						</tr>
+						<tr>
+							<td><code>node-glob</code></td>
+							<td><code>FileSystem.glob</code></td>
+						</tr>
+						<tr>
+							<td><code>fast-glob</code></td>
+							<td><code>FileSystem.glob</code></td>
+						</tr>
+						<tr>
+							<td><code>globby</code></td>
+							<td><code>FileSystem.glob</code></td>
+						</tr>
+						<tr>
+							<td><code>glob-all</code></td>
+							<td><code>FileSystem.glob</code></td>
+						</tr>
+						<tr>
+							<td><code>walker</code></td>
+							<td><code>FileSystem.walk</code></td>
+						</tr>
+						<tr>
+							<td><code>walkdir</code></td>
+							<td><code>FileSystem.walk</code></td>
+						</tr>
+						<tr>
+							<td><code>move-file</code></td>
+							<td><code>FileSystem.moveFile</code></td>
+						</tr>
+						<tr>
+							<td><code>path-exists</code></td>
+							<td><code>FileSystem.existsFile</code>, <code>FileSystem.existsDir</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="fileSystemSync">fileSystemSync</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/fileSystemSync"</span>)
+
+fs.writeFile(<span class="hljs-string">"foo.txt"</span>, <span class="hljs-string">"Hello world"</span>)</code></pre>
+				<h4 id="memoryFileSystem">memoryFileSystem</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { MemoryFileSystem } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/memoryFileSystem"</span>)
+<span class="hljs-keyword">const</span> fs = <span class="hljs-keyword">new</span> MemoryFileSystem()</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>memory-fs</code></td>
+							<td><code>MemoryFileSystem</code></td>
+						</tr>
+						<tr>
+							<td><code>mem-fs</code></td>
+							<td><code>MemoryFileSystem</code></td>
+						</tr>
+						<tr>
+							<td><code>memfs</code></td>
+							<td><code>MemoryFileSystem</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="fileSystemWatcher">fileSystemWatcher</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { FileSystemWatcher } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/fileSystemWatcher"</span>)
+
+<span class="hljs-keyword">const</span> watcher = <span class="hljs-keyword">new</span> FileSystemWatcher()
+watcher.on(<span class="hljs-string">"change"</span>, path =&gt; { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Changed"</span>, path) })
+watcher.on(<span class="hljs-string">"delete"</span>, path =&gt; { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Deleted"</span>, path) })
+watcher.on(<span class="hljs-string">"create"</span>, path =&gt; { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Created"</span>, path) })
+watcher.add(process.cwd(), () =&gt; { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Start Watching..."</span>) })</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>chokidar</code></td>
+							<td><code>FileSystemWatcher</code></td>
+						</tr>
+						<tr>
+							<td><code>gaze</code></td>
+							<td><code>FileSystemWatcher</code></td>
+						</tr>
+						<tr>
+							<td><code>sane</code></td>
+							<td><code>FileSystemWatcher</code></td>
+						</tr>
+						<tr>
+							<td><code>watchpack</code></td>
+							<td><code>FileSystemWatcher</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="matcher">matcher</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> matcher = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/matcher"</span>)
+
+matcher.match(<span class="hljs-string">"/path.js"</span>, <span class="hljs-string">"/*.js"</span>) <span class="hljs-comment">// true</span></code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>glob</code></td>
+							<td><code>Matcher</code></td>
+						</tr>
+						<tr>
+							<td><code>node-glob</code></td>
+							<td><code>Matcher</code></td>
+						</tr>
+						<tr>
+							<td><code>matcher</code></td>
+							<td><code>Matcher</code>, <code>match</code></td>
+						</tr>
+						<tr>
+							<td><code>minimatch</code></td>
+							<td><code>match</code></td>
+						</tr>
+						<tr>
+							<td><code>micromatch</code></td>
+							<td><code>match</code></td>
+						</tr>
+						<tr>
+							<td><code>anymatch</code></td>
+							<td><code>match</code></td>
+						</tr>
+						<tr>
+							<td><code>glob-base</code></td>
+							<td><code>Matcher.base</code></td>
+						</tr>
+						<tr>
+							<td><code>glob-parent</code></td>
+							<td><code>Matcher.base</code></td>
+						</tr>
+						<tr>
+							<td><code>is-glob</code></td>
+							<td><code>isGlob</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="path">path</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/path"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>rename-extension</code></td>
+							<td><code>setExt</code></td>
+						</tr>
+						<tr>
+							<td><code>changefilesname</code></td>
+							<td><code>setName</code></td>
+						</tr>
+						<tr>
+							<td><code>is-relative</code></td>
+							<td><code>isAbsolutePath</code></td>
+						</tr>
+						<tr>
+							<td><code>is-absolute</code></td>
+							<td><code>isAbsolutePath</code></td>
+						</tr>
+						<tr>
+							<td><code>normalize-path</code></td>
+							<td><code>normalizePath</code></td>
+						</tr>
+						<tr>
+							<td><code>path-is-inside</code></td>
+							<td><code>containsPath</code></td>
+						</tr>
+						<tr>
+							<td><code>contains-path</code></td>
+							<td><code>containsPath</code></td>
+						</tr>
+				</tbody></table>
+				<h3 id="网络">网络</h3>
+				<h4 id="request">request</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/request"</span>)
+
+<span class="hljs-keyword">const</span> html = <span class="hljs-keyword">await</span> request.request(<span class="hljs-string">"https://www.baidu.com"</span>)
+<span class="hljs-built_in">console</span>.log(html)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>request</code></td>
+							<td><code>request</code></td>
+						</tr>
+						<tr>
+							<td><code>got</code></td>
+							<td><code>request</code></td>
+						</tr>
+						<tr>
+							<td><code>axios</code></td>
+							<td><code>request</code></td>
+						</tr>
+						<tr>
+							<td><code>wreck</code></td>
+							<td><code>request</code></td>
+						</tr>
+						<tr>
+							<td><code>cookiejar</code></td>
+							<td><code>CookieJar</code></td>
+						</tr>
+						<tr>
+							<td><code>touch-cookiejar</code></td>
+							<td><code>CookieJar</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="httpServer">httpServer</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> httpServer = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/httpServer"</span>)
+
+<span class="hljs-keyword">const</span> server = <span class="hljs-keyword">new</span> httpServer.HTTPServer({}, (req, res) =&gt; {
+    res.end(req.href)
+})
+server.listen(<span class="hljs-number">8080</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>express</code></td>
+							<td><code>HTTPServer</code></td>
+						</tr>
+						<tr>
+							<td><code>koa</code></td>
+							<td><code>HTTPServer</code></td>
+						</tr>
+						<tr>
+							<td><code>http-server</code></td>
+							<td><code>HTTPServer</code></td>
+						</tr>
+						<tr>
+							<td><code>body-parser</code></td>
+							<td><code>HTTPRequest.body</code></td>
+						</tr>
+						<tr>
+							<td><code>cookie-parser</code></td>
+							<td><code>HTTPRequest.cookies</code></td>
+						</tr>
+						<tr>
+							<td><code>cookie-sessions</code></td>
+							<td><code>HTTPServer.sessions</code></td>
+						</tr>
+						<tr>
+							<td><code>multipart</code></td>
+							<td><code>HTTPRequest.files</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="webSocket">webSocket</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> webSocket = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/webSocket"</span>)
+
+<span class="hljs-keyword">const</span> server = <span class="hljs-keyword">new</span> webSocket.WebSocketServer(<span class="hljs-string">"ws://localhost:8080"</span>)
+server.on(<span class="hljs-string">"connection"</span>, ws =&gt; {
+    ws.send(<span class="hljs-string">"hello"</span>)
+})
+
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> webSocket.WebSocket(<span class="hljs-string">"ws://localhost:8080"</span>)
+client.on(<span class="hljs-string">"message"</span>, data =&gt; {
+    <span class="hljs-built_in">console</span>.log(data)
+    client.send(<span class="hljs-string">"hello"</span>)
+})</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>ws</code></td>
+							<td><code>WebSocket</code></td>
+						</tr>
+						<tr>
+							<td><code>websocket-driver</code></td>
+							<td><code>WebSocket</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="url">url</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/url"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>resolve-pathname</code></td>
+							<td><code>resolveURL</code></td>
+						</tr>
+						<tr>
+							<td><code>relative-url</code></td>
+							<td><code>relativeURL</code></td>
+						</tr>
+						<tr>
+							<td><code>normalize-url</code></td>
+							<td><code>normalizeURL</code></td>
+						</tr>
+						<tr>
+							<td><code>is-relative-url</code></td>
+							<td><code>isAbsoluteURL</code></td>
+						</tr>
+						<tr>
+							<td><code>get-urls</code></td>
+							<td><code>replaceURL</code></td>
+						</tr>
+						<tr>
+							<td><code>linkify-it</code></td>
+							<td><code>replaceURL</code></td>
+						</tr>
+				</tbody></table>
+				<h3 id="进程">进程</h3>
+				<h4 id="process">process</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> process = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/process"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>cross-spawn</code></td>
+							<td><code>exec</code></td>
+						</tr>
+						<tr>
+							<td><code>execa</code></td>
+							<td><code>exec</code></td>
+						</tr>
+						<tr>
+							<td><code>open</code></td>
+							<td><code>open</code></td>
+						</tr>
+						<tr>
+							<td><code>signal-exit</code></td>
+							<td><code>onExit</code>, <code>offExit</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="vm">vm</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> vm = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/vm"</span>)
+vm.runInVM(<span class="hljs-string">`var x = 1`</span>)</code></pre>
+				<h4 id="workerPool">workerPool</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { WorkerPool } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/workerPool"</span>)
+
+<span class="hljs-keyword">const</span> pool = <span class="hljs-keyword">new</span> WorkerPool(<span class="hljs-string">"./worker.js"</span>)
+<span class="hljs-keyword">await</span> pool.exec(<span class="hljs-string">"sum"</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// 3</span>
+
+<span class="hljs-comment">// ./worker.js:</span>
+<span class="hljs-comment">// exports.sum = (x, y) =&gt; x + y</span></code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>worker-threads-pool</code></td>
+							<td><code>WorkerPool</code></td>
+						</tr>
+				</tbody></table>
+				<h3 id="命令行">命令行</h3>
+				<h4 id="ansi">ansi</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> ansi = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/ansi"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>ansi-color</code></td>
+							<td><code>color</code></td>
+						</tr>
+						<tr>
+							<td><code>ansi-colors</code></td>
+							<td><code>color</code></td>
+						</tr>
+						<tr>
+							<td><code>chalk</code></td>
+							<td><code>bold</code>, <code>color</code>, <code>backgroundColor</code></td>
+						</tr>
+						<tr>
+							<td><code>kleur</code></td>
+							<td><code>bold</code>, <code>color</code>, <code>backgroundColor</code></td>
+						</tr>
+						<tr>
+							<td><code>ansi-style-codes</code></td>
+							<td><code>ANSIColor</code></td>
+						</tr>
+						<tr>
+							<td><code>ansi-regex</code></td>
+							<td><code>ansiCodeRegExp</code></td>
+						</tr>
+						<tr>
+							<td><code>strip-ansi</code></td>
+							<td><code>removeANSICodes</code></td>
+						</tr>
+						<tr>
+							<td><code>strip-color</code></td>
+							<td><code>removeANSICodes</code></td>
+						</tr>
+						<tr>
+							<td><code>ansi-stripper</code></td>
+							<td><code>removeANSICodes</code></td>
+						</tr>
+						<tr>
+							<td><code>cli-truncate</code></td>
+							<td><code>truncateString</code></td>
+						</tr>
+						<tr>
+							<td><code>ansi-color-table</code></td>
+							<td><code>formatTable</code></td>
+						</tr>
+						<tr>
+							<td><code>chunk-text</code></td>
+							<td><code>wrapString</code></td>
+						</tr>
+						<tr>
+							<td><code>wrap-ansi</code></td>
+							<td><code>wrapString</code></td>
+						</tr>
+						<tr>
+							<td><code>cli-columns</code></td>
+							<td><code>formatList</code></td>
+						</tr>
+						<tr>
+							<td><code>console-log-tree</code></td>
+							<td><code>formatTree</code></td>
+						</tr>
+						<tr>
+							<td><code>ansi-color-table</code></td>
+							<td><code>formatTable</code></td>
+						</tr>
+						<tr>
+							<td><code>columnify</code></td>
+							<td><code>formatTable</code></td>
+						</tr>
+						<tr>
+							<td><code>formatter-codeframe</code></td>
+							<td><code>formatCodeFrame</code></td>
+						</tr>
+						<tr>
+							<td><code>ansicolor</code></td>
+							<td><code>ansiToHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>ansi-to-html</code></td>
+							<td><code>ansiToHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>ansi-html</code></td>
+							<td><code>ansiToHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>stream-ansi2html</code></td>
+							<td><code>ansiToHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>string-width</code></td>
+							<td><code>getStringWidth</code></td>
+						</tr>
+						<tr>
+							<td><code>monospace-char-width</code></td>
+							<td><code>getCharWidth</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="commandLine">commandLine</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> commandLine = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/commandLine"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>show-terminal-cursor</code></td>
+							<td><code>showCursor</code></td>
+						</tr>
+						<tr>
+							<td><code>hide-terminal-cursor</code></td>
+							<td><code>hideCursor</code></td>
+						</tr>
+						<tr>
+							<td><code>cli-cursor</code></td>
+							<td><code>showCursor</code>, <code>hideCursor</code></td>
+						</tr>
+						<tr>
+							<td><code>restore-cursor</code></td>
+							<td><code>showCursor</code></td>
+						</tr>
+						<tr>
+							<td><code>meow</code></td>
+							<td><code>parseCommandLineArguments</code>, <code>formatCommandLineOptions</code></td>
+						</tr>
+						<tr>
+							<td><code>yargs</code></td>
+							<td><code>parseCommandLineArguments</code>, <code>formatCommandLineOptions</code></td>
+						</tr>
+						<tr>
+							<td><code>clear-cli</code></td>
+							<td><code>clear</code></td>
+						</tr>
+						<tr>
+							<td><code>node-console-input</code></td>
+							<td><code>input</code></td>
+						</tr>
+				</tbody></table>
+				<h3 id="logger"><code>logger</code></h3>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { Logger } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/logger"</span>)
+<span class="hljs-keyword">const</span> logger = <span class="hljs-keyword">new</span> Logger()
+
+logger.error(<span class="hljs-string">"Hello world"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>logger</code></td>
+							<td><code>Logger</code></td>
+						</tr>
+						<tr>
+							<td><code>fancy-log</code></td>
+							<td><code>Logger</code></td>
+						</tr>
+				</tbody></table>
+				<h3 id="编码、解析">编码、解析</h3>
+				<h4 id="base64">base64</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> base64 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/base64"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>js-base64</code></td>
+							<td><code>encodeBase64</code>, <code>decodeBase64</code></td>
+						</tr>
+						<tr>
+							<td><code>data-urlse</code></td>
+							<td><code>encodeDataURI</code>, <code>decodeDataURI</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="crypto">crypto</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> crypto = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/crypto"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>md5</code></td>
+							<td><code>md5</code></td>
+						</tr>
+						<tr>
+							<td><code>sha1</code></td>
+							<td><code>sha1</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="html">html</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> html = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/html"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>ent</code></td>
+							<td><code>encodeHTML</code>, <code>decodeHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>entities</code></td>
+							<td><code>encodeHTML</code>, <code>decodeHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>he</code></td>
+							<td><code>encodeHTML</code>, <code>decodeHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>html-entities</code></td>
+							<td><code>encodeHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>decode-html</code></td>
+							<td><code>decodeHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>html-decoder</code></td>
+							<td><code>decodeHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>html-entity-decoder</code></td>
+							<td><code>decodeHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>html-encoder-decoder</code></td>
+							<td><code>encodeHTML</code>, <code>decodeHTML</code></td>
+						</tr>
+						<tr>
+							<td><code>html-parser</code></td>
+							<td><code>parseHTML</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="js">js</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> js = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/js"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>js-string-escape</code></td>
+							<td><code>encodeJS</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="json">json</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> json = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/json"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>strip-json-comments</code></td>
+							<td><code>normalizeJSON</code></td>
+						</tr>
+						<tr>
+							<td><code>load-json-file</code></td>
+							<td><code>readJSON</code></td>
+						</tr>
+						<tr>
+							<td><code>write-json-file</code></td>
+							<td><code>writeJSON</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="css">css</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> css = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/css"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>cssesc</code></td>
+							<td><code>encodeCSS</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="esm">esm</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { transformESModuleToCommonJS } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/esm"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>esm</code></td>
+							<td><code>transformESModuleToCommonJS</code></td>
+						</tr>
+				</tbody></table>
+				<h3 id="生成代码">生成代码</h3>
+				<h4 id="lineColumn">lineColumn</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> lineColumn = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/lineColumn"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>find-line-column</code></td>
+							<td><code>indexToLineColumn</code>, <code>lineColumnToIndex</code></td>
+						</tr>
+						<tr>
+							<td><code>lines-and-columns</code></td>
+							<td><code>LineMap</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="sourceMap">sourceMap</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> sourceMap = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/sourceMap"</span>)
+
+<span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> sourceMap.SourceMapBuilder({ <span class="hljs-comment">/* 已存在的 map*/</span> })
+map.addMapping(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+<span class="hljs-keyword">const</span> output = map.toJSON() <span class="hljs-comment">// 生成的新 map</span></code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>source-map</code></td>
+							<td><code>SourceMapBuilder</code></td>
+						</tr>
+						<tr>
+							<td><code>convert-source-map</code></td>
+							<td><code>SourceMapBuilder</code></td>
+						</tr>
+						<tr>
+							<td><code>merge-source-map</code></td>
+							<td><code>SourceMapBuilder.applySourceMap</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="textWriter">textWriter</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { TextWriter, SourceMapTextWriter } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/textWriter"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>string-builder</code></td>
+							<td><code>TextWriter</code></td>
+						</tr>
+						<tr>
+							<td><code>source-list-map</code></td>
+							<td><code>SourceMapTextWriter</code></td>
+						</tr>
+						<tr>
+							<td><code>fast-sourcemap-concat</code></td>
+							<td><code>SourceMapTextWriter</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="textDocument">textDocument</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { TextDocument, replace, insert } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/textDocument"</span>)
+
+<span class="hljs-keyword">const</span> data = replace({
+    <span class="hljs-attr">content</span>: <span class="hljs-string">"var a = 1"</span>,
+    <span class="hljs-attr">path</span>: <span class="hljs-string">"source.js"</span>
+}, /\bvar\b/g, <span class="hljs-string">"let"</span>)
+<span class="hljs-built_in">console</span>.log(data.content)
+<span class="hljs-built_in">console</span>.log(data.sourceMap)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>magic-string</code></td>
+							<td><code>TextDocument</code></td>
+						</tr>
+				</tbody></table>
+				<h3 id="异步">异步</h3>
+				<h4 id="asyncQueue">asyncQueue</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { AsyncQueue } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/asyncQueue"</span>)
+
+<span class="hljs-keyword">const</span> asyncQueue = <span class="hljs-keyword">new</span> AsyncQueue()
+<span class="hljs-keyword">await</span> asyncQueue.then(<span class="hljs-keyword">async</span> () =&gt; { <span class="hljs-comment">/* 异步操作 1 */</span> })
+<span class="hljs-keyword">await</span> asyncQueue.then(<span class="hljs-keyword">async</span> () =&gt; { <span class="hljs-comment">/* 异步操作 2 */</span> })
+<span class="hljs-keyword">await</span> asyncQueue.then(<span class="hljs-keyword">async</span> () =&gt; { <span class="hljs-comment">/* 异步操作 3 */</span> })</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>asyncqueue</code></td>
+							<td><code>AsyncQueue</code></td>
+						</tr>
+						<tr>
+							<td><code>node-asyncqueue</code></td>
+							<td><code>AsyncQueue</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="deferred">deferred</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { Deferred } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/deferred"</span>)
+
+<span class="hljs-keyword">const</span> deferred = <span class="hljs-keyword">new</span> Deferred()
+deferred.reject()
+setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    deferred.resolve()
+}, <span class="hljs-number">2000</span>)
+
+<span class="hljs-keyword">await</span> deferred</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>deferred</code></td>
+							<td><code>Deferred</code></td>
+						</tr>
+				</tbody></table>
+				<h4 id="eventEmitter">eventEmitter</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { EventEmitter } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/eventEmitter"</span>)
+
+<span class="hljs-keyword">const</span> events = <span class="hljs-keyword">new</span> EventEmitter()
+events.on(<span class="hljs-string">"error"</span>, data =&gt; <span class="hljs-built_in">console</span>.log(data))  <span class="hljs-comment">// 绑定 error 事件</span>
+<span class="hljs-keyword">await</span> events.emit(<span class="hljs-string">"error"</span>, <span class="hljs-string">"hello"</span>)            <span class="hljs-comment">// 触发 error 事件，输出 hello</span></code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>events</code></td>
+							<td><code>EventEmitter</code></td>
+						</tr>
+						<tr>
+							<td><code>tappable</code></td>
+							<td><code>EventEmitter</code></td>
+						</tr>
+				</tbody></table>
+				<h3 id="其它">其它</h3>
+				<h4 id="misc">misc</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> misc = <span class="hljs-built_in">require</span>(<span class="hljs-string">"tutils/misc"</span>)</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>npm 组件名</th>
+							<th>TUtils 对应的组件函数</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td><code>strip-bom</code></td>
+							<td><code>stripBOM</code></td>
+						</tr>
+						<tr>
+							<td><code>sorted-array-type</code></td>
+							<td><code>insertSorted</code></td>
+						</tr>
+						<tr>
+							<td><code>throttle-debounce</code></td>
+							<td><code>throttle</code></td>
+						</tr>
+						<tr>
+							<td><code>escape-string-regexp</code></td>
+							<td><code>escapeRegExp</code></td>
+						</tr>
+						<tr>
+							<td><code>format-date</code></td>
+							<td><code>formatDate</code></td>
+						</tr>
+						<tr>
+							<td><code>dateformat</code></td>
+							<td><code>formatDate</code></td>
+						</tr>
+						<tr>
+							<td><code>Moment.js</code></td>
+							<td><code>formatDate</code></td>
+						</tr>
+						<tr>
+							<td><code>node-dateformate</code></td>
+							<td><code>formatDate</code></td>
+						</tr>
+						<tr>
+							<td><code>pretty-hrtime</code></td>
+							<td><code>formatHRTime</code></td>
+						</tr>
+						<tr>
+							<td><code>pretty-time</code></td>
+							<td><code>formatHRTime</code></td>
+						</tr>
+						<tr>
+							<td><code>pretty-bytes</code></td>
+							<td><code>formatSize</code></td>
+						</tr>
+						<tr>
+							<td><code>pretty-size</code></td>
+							<td><code>formatSize</code></td>
+						</tr>
+				</tbody></table>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_ansi_.html">"ansi"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_asyncqueue_.html">"async<wbr>Queue"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_base64_.html">"base64"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_commandline_.html">"command<wbr>Line"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_crypto_.html">"crypto"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_css_.html">"css"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_deferred_.html">"deferred"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_esm_.html">"esm"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_eventemitter_.html">"event<wbr>Emitter"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_filesystem_.html">"file<wbr>System"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_filesystemsync_.html">"file<wbr>System<wbr>Sync"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_filesystemwatcher_.html">"file<wbr>System<wbr>Watcher"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_html_.html">"html"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_httpserver_.html">"http<wbr>Server"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_js_.html">"js"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_json_.html">"json"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_linecolumn_.html">"line<wbr>Column"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_logger_.html">"logger"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_matcher_.html">"matcher"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_memoryfilesystem_.html">"memory<wbr>File<wbr>System"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_misc_.html">"misc"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_path_.html">"path"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_process_.html">"process"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_request_.html">"request"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_sourcemap_.html">"source<wbr>Map"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_textdocument_.html">"text<wbr>Document"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_textwriter_.html">"text<wbr>Writer"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_url_.html">"url"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_vm_.html">"vm"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_websocket_.html">"web<wbr>Socket"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_workerpool_.html">"worker<wbr>Pool"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a772fc0ebcc2ca0f4be921d9dce0fb78";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

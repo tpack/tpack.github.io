@@ -1,0 +1,957 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SourceMapBuilder | tutils</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">tutils</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_sourcemap_.html">&quot;sourceMap&quot;</a>
+				</li>
+				<li>
+					<a href="_sourcemap_.sourcemapbuilder.html">SourceMapBuilder</a>
+				</li>
+			</ul>
+			<h1>Class SourceMapBuilder</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>表示一个源映射（Source Map）构建器，用于解析、读取、生成、合并源映射</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">SourceMapBuilder</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/_sourcemap_.sourcemapgenerator.html" class="tsd-signature-type">SourceMapGenerator</a></li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#file" class="tsd-kind-icon">file</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#mappings" class="tsd-kind-icon">mappings</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#names" class="tsd-kind-icon">names</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#sourceroot" class="tsd-kind-icon">source<wbr>Root</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#sources" class="tsd-kind-icon">sources</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#sourcescontent" class="tsd-kind-icon">sources<wbr>Content</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#version" class="tsd-kind-icon">version</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#addmapping" class="tsd-kind-icon">add<wbr>Mapping</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#addname" class="tsd-kind-icon">add<wbr>Name</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#addsource" class="tsd-kind-icon">add<wbr>Source</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#applysourcemap" class="tsd-kind-icon">apply<wbr>Source<wbr>Map</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#eachmapping" class="tsd-kind-icon">each<wbr>Mapping</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#getallgenerated" class="tsd-kind-icon">get<wbr>All<wbr>Generated</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#getsource" class="tsd-kind-icon">get<wbr>Source</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#getsourcecontent" class="tsd-kind-icon">get<wbr>Source<wbr>Content</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#setsourcecontent" class="tsd-kind-icon">set<wbr>Source<wbr>Content</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#tojson" class="tsd-kind-icon">toJSON</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sourcemap_.sourcemapbuilder.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Source<wbr>Map<wbr>Builder<span class="tsd-signature-symbol">(</span>sourceMapData<span class="tsd-signature-symbol">?: </span><a href="../modules/_sourcemap_.html#sourcemapdata" class="tsd-signature-type">SourceMapData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_sourcemap_.sourcemapbuilder.html" class="tsd-signature-type">SourceMapBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:126</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>初始化新的源映射构建器</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sourceMapData: <a href="../modules/_sourcemap_.html#sourcemapdata" class="tsd-signature-type">SourceMapData</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>要转换的源映射数据</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_sourcemap_.sourcemapbuilder.html" class="tsd-signature-type">SourceMapBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="file" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> file</h3>
+					<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in sourceMap.ts:111</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>获取或设置生成文件的路径</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="mappings" class="tsd-anchor"></a>
+					<h3>mappings</h3>
+					<div class="tsd-signature tsd-kind-icon">mappings<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_sourcemap_.mapping.html" class="tsd-signature-type">Mapping</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in sourceMap.ts:126</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>获取所有映射点</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="names" class="tsd-anchor"></a>
+					<h3>names</h3>
+					<div class="tsd-signature tsd-kind-icon">names<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in sourceMap.ts:123</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>获取所有符号名</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="sourceroot" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> source<wbr>Root</h3>
+					<div class="tsd-signature tsd-kind-icon">source<wbr>Root<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in sourceMap.ts:114</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>获取或设置所有源文件的根路径</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="sources" class="tsd-anchor"></a>
+					<h3>sources</h3>
+					<div class="tsd-signature tsd-kind-icon">sources<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in sourceMap.ts:117</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>获取所有源文件的路径</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="sourcescontent" class="tsd-anchor"></a>
+					<h3>sources<wbr>Content</h3>
+					<div class="tsd-signature tsd-kind-icon">sources<wbr>Content<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in sourceMap.ts:120</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>获取所有源文件的内容</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="version" class="tsd-anchor"></a>
+					<h3>version</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> version<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:108</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>获取当前源映射构建器支持的版本号</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addmapping" class="tsd-anchor"></a>
+					<h3>add<wbr>Mapping</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Mapping<span class="tsd-signature-symbol">(</span>generatedLine<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, generatedColumn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, sourcePath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, sourceLine<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, sourceColumn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_sourcemap_.mapping.html" class="tsd-signature-type">Mapping</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:352</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>添加一个映射点</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>generatedLine: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>生成的行号（从 0 开始）</p>
+									</div>
+								</li>
+								<li>
+									<h5>generatedColumn: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>生成的列号（从 0 开始）</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sourcePath: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>映射的源文件路径或索引</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sourceLine: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>映射的源文件行号（从 0 开始），如果 <code>sourcePath</code> 不为 <code>undefined</code>，则 <code>sourceLine</code> 不为 <code>undefined</code></p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sourceColumn: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>映射的源文件列号（从 0 开始），如果 <code>sourcePath</code> 不为 <code>undefined</code>，则 <code>sourceColumn</code> 不为 <code>undefined</code></p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>符号名或索引</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_sourcemap_.mapping.html" class="tsd-signature-type">Mapping</a></h4>
+							<p>返回添加的映射点</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addname" class="tsd-anchor"></a>
+					<h3>add<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Name<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:334</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>添加一个符号名</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>要添加的符号名</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>返回符号名的索引</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addsource" class="tsd-anchor"></a>
+					<h3>add<wbr>Source</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Source<span class="tsd-signature-symbol">(</span>sourcePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:303</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>添加一个源文件</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sourcePath: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>要添加的源文件路径</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>返回源文件的索引</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="applysourcemap" class="tsd-anchor"></a>
+					<h3>apply<wbr>Source<wbr>Map</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">apply<wbr>Source<wbr>Map<span class="tsd-signature-symbol">(</span>sourceMap<span class="tsd-signature-symbol">: </span><a href="_sourcemap_.sourcemapbuilder.html" class="tsd-signature-type">SourceMapBuilder</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:398</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>合并新的源映射</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>假如有源文件 A，通过一次生成得到 B，其源映射记作 S1；
+											然后 B 通过再次生成得到 C，其源映射记作 S2；
+										此时需要调用 <code>S2.applySourceMap(S1)</code>，将 S2 更新为 A 到 C 的源映射</p>
+										<blockquote>
+											<h5 id="注意">注意</h5>
+											<ol>
+												<li>函数仅返回合并的源映射和当前源映射的最小交集</li>
+												<li>所有路径都应该是绝对路径，且区分大小写</li>
+												<li><code>sourceRoot</code> 会被忽略</li>
+											</ol>
+										</blockquote>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sourceMap: <a href="_sourcemap_.sourcemapbuilder.html" class="tsd-signature-type">SourceMapBuilder</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>要合并的源映射构建器</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="eachmapping" class="tsd-anchor"></a>
+					<h3>each<wbr>Mapping</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">each<wbr>Mapping<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:282</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>遍历所有映射点并调用指定的函数</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>callback: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>遍历的回调函数</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>generatedLine<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, generatedColumn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, sourcePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, sourceLine<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, sourceColumn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, mapping<span class="tsd-signature-symbol">: </span><a href="../interfaces/_sourcemap_.mapping.html" class="tsd-signature-type">Mapping</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>generatedLine: <span class="tsd-signature-type">number</span></h5>
+															<div class="tsd-comment tsd-typography">
+																<p>生成文件的行号（从 0 开始）</p>
+															</div>
+														</li>
+														<li>
+															<h5>generatedColumn: <span class="tsd-signature-type">number</span></h5>
+															<div class="tsd-comment tsd-typography">
+																<p>生成文件的列号（从 0 开始）</p>
+															</div>
+														</li>
+														<li>
+															<h5>sourcePath: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+															<div class="tsd-comment tsd-typography">
+																<p>源文件的路径</p>
+															</div>
+														</li>
+														<li>
+															<h5>sourceLine: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+															<div class="tsd-comment tsd-typography">
+																<p>源文件的行号（从 0 开始）</p>
+															</div>
+														</li>
+														<li>
+															<h5>sourceColumn: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+															<div class="tsd-comment tsd-typography">
+																<p>源文件的列号（从 0 开始）</p>
+															</div>
+														</li>
+														<li>
+															<h5>name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+															<div class="tsd-comment tsd-typography">
+																<p>符号名</p>
+															</div>
+														</li>
+														<li>
+															<h5>mapping: <a href="../interfaces/_sourcemap_.mapping.html" class="tsd-signature-type">Mapping</a></h5>
+															<div class="tsd-comment tsd-typography">
+																<p>原始映射点</p>
+															</div>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span>
+														<span class="tsd-signature-symbol"> | </span>
+														<span class="tsd-signature-type">boolean</span>
+													</h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>如果回调函数返回 <code>false</code>，则返回 <code>false</code>，否则返回 <code>true</code></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getallgenerated" class="tsd-anchor"></a>
+					<h3>get<wbr>All<wbr>Generated</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Generated<span class="tsd-signature-symbol">(</span>sourcePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, sourceLine<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, sourceColumn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_sourcemap_.generatedlocation.html" class="tsd-signature-type">GeneratedLocation</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:231</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>获取源文件中指定位置生成后的所有位置</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sourcePath: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>要获取的源文件路径或索引</p>
+									</div>
+								</li>
+								<li>
+									<h5>sourceLine: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>源文件中的行号（从 0 开始）</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sourceColumn: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>源文件中的列号（从 0 开始），如果未提供则返回指定行所有列的生成信息</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_sourcemap_.generatedlocation.html" class="tsd-signature-type">GeneratedLocation</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getsource" class="tsd-anchor"></a>
+					<h3>get<wbr>Source</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Source<span class="tsd-signature-symbol">(</span>generatedLine<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, generatedColumn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, adjustColumn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, adjustLine<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_sourcemap_.sourcelocation.html" class="tsd-signature-type">SourceLocation</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:184</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>获取生成文件中指定位置的源信息，如果找不到映射点则返回空</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>generatedLine: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>生成文件中的行号（从 0 开始）</p>
+									</div>
+								</li>
+								<li>
+									<h5>generatedColumn: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>生成文件中的列号（从 0 开始）</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> adjustColumn: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>是否根据映射点和指定列计算偏移后的列号</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> adjustLine: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>如果找不到匹配的映射点，是否往前搜索其它行的映射点并计算指定行的位置</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_sourcemap_.sourcelocation.html" class="tsd-signature-type">SourceLocation</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getsourcecontent" class="tsd-anchor"></a>
+					<h3>get<wbr>Source<wbr>Content</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Source<wbr>Content<span class="tsd-signature-symbol">(</span>sourcePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:315</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>获取指定源文件的内容，如果未找到源文件内容则返回 <code>undefined</code></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sourcePath: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>要获取的源文件路径</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setsourcecontent" class="tsd-anchor"></a>
+					<h3>set<wbr>Source<wbr>Content</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Source<wbr>Content<span class="tsd-signature-symbol">(</span>sourcePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, sourceContent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in sourceMap.ts:325</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>设置指定源文件的内容</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sourcePath: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>要设置的源文件路径</p>
+									</div>
+								</li>
+								<li>
+									<h5>sourceContent: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>要设置的源文件内容</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="tojson" class="tsd-anchor"></a>
+					<h3>toJSON</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">toJSON<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_sourcemap_.sourcemapobject.html" class="tsd-signature-type">SourceMapObject</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_sourcemap_.sourcemapgenerator.html">SourceMapGenerator</a>.<a href="../interfaces/_sourcemap_.sourcemapgenerator.html#tojson">toJSON</a></p>
+								<ul>
+									<li>Defined in sourceMap.ts:152</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_sourcemap_.sourcemapobject.html" class="tsd-signature-type">SourceMapObject</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="tostring" class="tsd-anchor"></a>
+					<h3>to<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_sourcemap_.sourcemapgenerator.html">SourceMapGenerator</a>.<a href="../interfaces/_sourcemap_.sourcemapgenerator.html#tostring">toString</a></p>
+								<ul>
+									<li>Defined in sourceMap.ts:171</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_sourcemap_.html">"source<wbr>Map"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_sourcemap_.sourcemapbuilder.html" class="tsd-kind-icon">Source<wbr>Map<wbr>Builder</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#file" class="tsd-kind-icon">file</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#mappings" class="tsd-kind-icon">mappings</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#names" class="tsd-kind-icon">names</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#sourceroot" class="tsd-kind-icon">source<wbr>Root</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#sources" class="tsd-kind-icon">sources</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#sourcescontent" class="tsd-kind-icon">sources<wbr>Content</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#version" class="tsd-kind-icon">version</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#addmapping" class="tsd-kind-icon">add<wbr>Mapping</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#addname" class="tsd-kind-icon">add<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#addsource" class="tsd-kind-icon">add<wbr>Source</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#applysourcemap" class="tsd-kind-icon">apply<wbr>Source<wbr>Map</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#eachmapping" class="tsd-kind-icon">each<wbr>Mapping</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#getallgenerated" class="tsd-kind-icon">get<wbr>All<wbr>Generated</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#getsource" class="tsd-kind-icon">get<wbr>Source</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#getsourcecontent" class="tsd-kind-icon">get<wbr>Source<wbr>Content</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#setsourcecontent" class="tsd-kind-icon">set<wbr>Source<wbr>Content</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#tojson" class="tsd-kind-icon">toJSON</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sourcemap_.sourcemapbuilder.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_sourcemap_.generatedlocation.html" class="tsd-kind-icon">Generated<wbr>Location</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_sourcemap_.indexmapobject.html" class="tsd-kind-icon">Index<wbr>Map<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_sourcemap_.mapping.html" class="tsd-kind-icon">Mapping</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_sourcemap_.sourcelocation.html" class="tsd-kind-icon">Source<wbr>Location</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_sourcemap_.sourcemapgenerator.html" class="tsd-kind-icon">Source<wbr>Map<wbr>Generator</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_sourcemap_.sourcemapobject.html" class="tsd-kind-icon">Source<wbr>Map<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_sourcemap_.html#sourcemapdata" class="tsd-kind-icon">Source<wbr>Map<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_sourcemap_.html#createsourcemappingurlcomment" class="tsd-kind-icon">create<wbr>Source<wbr>MappingURLComment</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_sourcemap_.html#createsourceurlcomment" class="tsd-kind-icon">create<wbr>SourceURLComment</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_sourcemap_.html#getsourcemappingurl" class="tsd-kind-icon">get<wbr>Source<wbr>MappingURL</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_sourcemap_.html#setsourcemappingurl" class="tsd-kind-icon">set<wbr>Source<wbr>MappingURL</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_sourcemap_.html#tosourcemapbuilder" class="tsd-kind-icon">to<wbr>Source<wbr>Map<wbr>Builder</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_sourcemap_.html#tosourcemapobject" class="tsd-kind-icon">to<wbr>Source<wbr>Map<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_sourcemap_.html#tosourcemapstring" class="tsd-kind-icon">to<wbr>Source<wbr>Map<wbr>String</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a772fc0ebcc2ca0f4be921d9dce0fb78";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
